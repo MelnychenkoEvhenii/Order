@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Магазин</title>
+	<script src="Lib/js/jquery.js"></script>
+	<script src="Lib/js/livesearch.js"></script>
+	<script src="Lib/js/livesearch.min.js"></script>
+	<script src="Lib/js/bootstrap.min.js"></script>
+    <link href="Lib/css/bootstrap.min.css" rel="stylesheet">
+	<link href="Lib/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Магазин</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Оформить заказ</a></li>
+      <li><a href="#">Мои заказы</a></li> 
+    </ul>
+  </div>
+</nav>
+
+<br />
+
+<div class="container text-center">
+	<h1>Оформить заказ</h1>
+		
+		<br />
+		<select class="form-control" id="selectGoods">
+		  	  <option selected="selected">Выберите товар</option>
+		</select>
+		
+		<br />
+		
+		<select class="form-control" id="selectKind">
+			  <option selected="selected">Выберите марку</option>
+		</select>
+		
+		<br />
+		
+		<select class="form-control" id="selectModel">
+		      <option selected="selected">Выберите модель</option>
+		</select>
+		
+		<br />
+		<form class="form-inline" role="form">
+			<div class="form-group">
+				<input type="text" class="form-control" id="customer" placeholder="Enter name">
+			</div>
+			
+			<div class="form-group">
+				<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+			</div>
+		</form>
+</div>	
+
+<br />
+
+<div class="container text-center">
+	<div class="row">
+		<button type="button" class="btn btn-primary" id="buttonDescription">Посмотреть</button>
+		<button type="button" class="btn btn-default" id="buttonAddBasket">Добавить в корзину</button>
+		<button type="button" class="btn btn-success" id="buttonPay">Оплатить</button>
+	</div>
+</div> 
+
+<br /><br />
+
+<div class="container showTable" style="display: none;">
+	<div class="row">
+
+		<form class="navbar-form navbar-right" role="search">
+  			<div class="form-group">
+   				Поиск: <input type="text" id="livesearch" class="form-control" placeholder="Поиск...">
+  			</div>
+		</form>
+	<br />	
+
+<div id="table"></div>
+		
+	</div>
+</div>
+
+<div id='alert_dialog' style='display:none;'>
+	<div id='alert_fog'></div>
+		<div id='alert_body'><span class='alert_text'>Ваш заказ</span><hr /><br />
+			<span class='alert_text_2'>
+				Товар:<br /><span id="goods"></span><br /><br />
+				Характеристики:<br /><span id="parametrs"></span><br /><br />
+				Цена:<span id="price"></span><br /><br />
+			</span><hr />
+			
+			<span id='alert_button'>
+				<button id='alert_close'>Закрыть</button>
+			</span>
+		</div>
+</div>
+
+<div id='alert_dialog2' style='display:none;'>
+	<div id='alert_fog2'></div>
+		<div id='alert_body2'><span class='alert_text2'>Что пойдет на сервер..?</span><hr /><br />
+			<span class='alert_text_22'>
+				<span id="infoToServer"></span><br /><br />
+			</span><hr />
+			
+			<span id='alert_button2'>
+				<button id='alert_close2'>Закрыть</button>
+			</span>
+		</div>
+</div>
+
+<script src="Lib/js/main.js"></script>
+
+</body>
+</html>
